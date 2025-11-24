@@ -764,6 +764,61 @@ terraform plan  # Review differences
 
 
 
+
+## AWS Q&A
+
+**1. Explain the difference between EC2 instance types and when you would use each family**
+
+EC2 instances are categorized into families: General Purpose (T3, M5) for balanced workloads, Compute Optimized (C5) for CPU-intensive tasks, Memory Optimized (R5, X1) for memory-heavy applications like databases, Storage Optimized (I3, D2) for high I/O operations, and Accelerated Computing (P3, G4) for GPU workloads. For example, use T3 for web servers with burstable CPU needs, R5 for Redis caches, and C5 for batch processing jobs.
+
+**2. How would you implement a highly available and fault-tolerant architecture in AWS?**
+
+Use multiple Availability Zones with load balancers (ALB/NLB) distributing traffic across instances in each AZ. Implement Auto Scaling Groups to automatically replace unhealthy instances. Use RDS Multi-AZ for database redundancy, S3 for durable storage with cross-region replication if needed, and Route 53 for DNS failover. Add CloudWatch alarms to monitor health and trigger automated responses. This ensures no single point of failure.
+
+**3. Describe VPC networking components and how they work together**
+
+A VPC provides isolated network space. Key components include: Subnets (public/private) that segment your network, Internet Gateway for public internet access, NAT Gateway for private subnet outbound traffic, Route Tables defining traffic routing rules, Security Groups (stateful firewalls at instance level), and NACLs (stateless firewalls at subnet level). VPC Peering or Transit Gateway connects multiple VPCs. This creates a secure, controlled network environment.
+
+**4. Explain the differences between IAM roles, policies, and users**
+
+IAM Users are permanent identities for people or services with long-term credentials. IAM Roles are temporary identities that can be assumed by users, services, or AWS resources without embedded credentials. IAM Policies are JSON documents defining permissions that attach to users, groups, or roles. Best practice: use roles for EC2 instances and Lambda functions rather than embedding access keys, and follow least privilege principle in policies.
+
+**5. How would you optimize AWS costs for a production environment?**
+
+Implement Reserved Instances or Savings Plans for predictable workloads (up to 72% savings). Use Spot Instances for fault-tolerant batch jobs. Right-size instances using AWS Compute Optimizer recommendations. Enable S3 lifecycle policies to move data to cheaper storage classes (Glacier, Intelligent-Tiering). Delete unused EBS volumes and snapshots. Set up AWS Budgets and Cost Anomaly Detection. Use Auto Scaling to match capacity with demand.
+
+**6. Explain AWS Lambda cold starts and how to mitigate them**
+
+Cold starts occur when Lambda initializes a new execution environment, adding 100ms-5s latency. They happen when: function is invoked for first time, after being idle, or when scaling up. Mitigations include: using Provisioned Concurrency to keep environments warm, minimizing deployment package size, choosing runtime efficiently (Node.js/Python start faster than Java), implementing initialization code outside handler, and using Lambda SnapStart for Java functions.
+
+**7. How do you implement CI/CD pipelines in AWS?**
+
+Use CodePipeline as orchestration tool connecting: CodeCommit/GitHub for source control, CodeBuild for compiling and testing code, and CodeDeploy for deploying to EC2, ECS, or Lambda. Integrate with CloudFormation or Terraform for infrastructure as code. Add manual approval stages for production. Use artifacts stored in S3, implement blue-green or canary deployments, and integrate CloudWatch for monitoring. Alternative: use Jenkins on EC2 with AWS CLI/SDKs.
+
+**8. Explain the difference between Application Load Balancer and Network Load Balancer**
+
+ALB operates at Layer 7 (HTTP/HTTPS), supports path-based and host-based routing, integrates with WAF, handles SSL termination, and is ideal for microservices. NLB operates at Layer 4 (TCP/UDP), handles millions of requests per second with ultra-low latency, preserves source IP, supports static IPs, and is best for extreme performance needs or non-HTTP protocols. ALB is more feature-rich; NLB is faster and simpler.
+
+**9. How would you secure secrets and sensitive data in AWS?**
+
+Use AWS Secrets Manager or Systems Manager Parameter Store (encrypted) for storing credentials, API keys, and connection strings. Enable automatic rotation for database credentials. Use KMS for encryption key management. Never hardcode secrets in code or environment variables. Implement IAM policies restricting access to secrets. For applications, use IAM roles to retrieve secrets at runtime. Encrypt data at rest (EBS, S3, RDS) and in transit (TLS).
+
+**10. Describe your approach to monitoring and logging in AWS**
+
+Implement CloudWatch for metrics, logs, and alarms. Use CloudWatch Logs Insights for log analysis. Enable VPC Flow Logs, CloudTrail for API auditing, and AWS Config for resource compliance. Set up CloudWatch Dashboards for visibility. Use X-Ray for distributed tracing. Aggregate logs to centralized location (S3 or ELK stack). Create SNS topics for alarm notifications. Implement custom metrics for application-specific monitoring and set up automated remediation with Lambda.
+
+
+
+
+
+
+
+
+
+
+
+
+
 # DevOps middle+, senior questions
 
 
