@@ -4,17 +4,17 @@
 # Table of contents
 
 - [DevOps middle+, senior interview questions](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-interview-questions/devops-middle-senior-interview-questions.md)
-- ![Ansible core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/ansible.md)
-- ![AWS & cloud concepts in general](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/aws.md)
-- ![Docker and container runtimes](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/docker-container-runtimes.md)
-- ![GitHub Actions](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/github-actions.md)
-- ![GitLab CI/CD core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/gitlab.md)
-- ![Kubernetes core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/kubernetes.md)
-- ![Linux core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/linux.md)
-- ![Networking core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/networking-tcp-ip-load-balancing-etc.md)
-- ![PostgreSQL & database concepts in general](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/postgres.md)
-- ![Terraform](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/terraform.md)
-- ![Common DevOps tools - short review](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-short-review/common-devops-tools-short-review.md)
+- [Ansible core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/ansible.md)
+- [AWS & cloud concepts in general](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/aws.md)
+- [Docker and container runtimes](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/docker-container-runtimes.md)
+- [GitHub Actions](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/github-actions.md)
+- [GitLab CI/CD core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/gitlab.md)
+- [Kubernetes core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/kubernetes.md)
+- [Linux core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/linux.md)
+- [Networking core concepts](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/networking-tcp-ip-load-balancing-etc.md)
+- [PostgreSQL & database concepts in general](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/postgres.md)
+- [Terraform](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-detailed-review/terraform.md)
+- [Common DevOps tools - short review](https://github.com/immanuwell/DevOps-interview-questions/blob/main/devops-tools-short-review/common-devops-tools-short-review.md)
 
 # Common tools in DevOps
 
