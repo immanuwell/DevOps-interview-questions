@@ -317,3 +317,8 @@ They control traffic at the pod level using labels; by default allow-all, but on
 ## **20. How does Kubernetes perform rolling updates?**
 
 Deployment updates pods gradually using maxSurge/maxUnavailable, ensuring new pods become Ready before old ones terminate—supports automatic rollback on failure.
+
+
+### kubectl exec cheat sheet
+* `kubectl exec -it pod-name -- /bin/sh` — get shell in pod
+* `kubectl exec deploy/app -- env` — run one-off command
